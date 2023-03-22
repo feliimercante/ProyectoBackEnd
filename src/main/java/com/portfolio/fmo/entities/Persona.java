@@ -28,12 +28,23 @@ public class Persona {
     public Persona() {
     }
 
-    public Persona(String nombre, String titulo, String descripcion, ArrayList<Educacion> arrayList) {
+    public Persona(Integer id, String nombre, String titulo, String descripcion, Set<Skill> skills, Set<Proyecto> proyecto, Set<ExpLaboral> expLaboral, Set<Educacion> educacion) {
+        this.id = id;
         this.nombre = nombre;
         this.titulo = titulo;
         this.descripcion = descripcion;
         this.skills = skills;
         this.proyecto = proyecto;
+        this.expLaboral = expLaboral;
+        this.educacion = educacion;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getNombre() {
@@ -75,5 +86,23 @@ public class Persona {
     public void setProyecto(Set<Proyecto> proyecto) {
         this.proyecto = proyecto;
     }
+
+    public Set<ExpLaboral> getExpLaboral() {
+        return expLaboral;
+    }
+
+    public void setExpLaboral(Set<ExpLaboral> expLaboral) {
+        this.expLaboral = expLaboral;
+    }
+
+    public Set<Educacion> getEducacion() {
+        return educacion;
+    }
+
+    public void setEducacion(Set<Educacion> educacion) {
+        this.educacion = educacion;
+    }
+
+    
 
 }
