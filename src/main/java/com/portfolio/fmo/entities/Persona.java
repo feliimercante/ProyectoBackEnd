@@ -16,12 +16,14 @@ public class Persona {
     private String nombre;
     private String titulo;
     private String descripcion;
-    //   private ArrayList<Trabajo> explab;
-    //  private ArrayList<Trabajo> educacion;
     @OneToMany(mappedBy = "persona")
     private Set<Skill> skills;
     @OneToMany(mappedBy = "persona")
     private Set<Proyecto> proyecto;
+    @OneToMany(mappedBy = "persona")
+    private Set<ExpLaboral> expLaboral;
+    @OneToMany(mappedBy = "persona")
+    private Set<Educacion> educacion;
 
     public Persona() {
     }
@@ -30,8 +32,6 @@ public class Persona {
         this.nombre = nombre;
         this.titulo = titulo;
         this.descripcion = descripcion;
-        //this.explab = explab;
-        //this.educacion = educacion;
         this.skills = skills;
         this.proyecto = proyecto;
     }
@@ -60,23 +60,6 @@ public class Persona {
         this.descripcion = descripcion;
     }
 
-    /*
-    public ArrayList<Trabajo> getExplab() {
-        return explab;
-    }
-
-    public void setExplab(ArrayList<Trabajo> explab) {
-        this.explab = explab;
-    }
-
-    public ArrayList<Trabajo> getEducacion() {
-        return educacion;
-    }
-
-    public void setEducacion(ArrayList<Trabajo> educacion) {
-        this.educacion = educacion;
-    }
-     */
     public Set<Skill> getSkills() {
         return skills;
     }
