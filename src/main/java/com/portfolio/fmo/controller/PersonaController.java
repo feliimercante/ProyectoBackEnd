@@ -10,6 +10,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @RestController
@@ -19,7 +20,7 @@ public class PersonaController {
     PersonaService service;
     @RequestMapping("/list")
     public ResponseEntity<List<Proyecto>> list() throws JsonProcessingException {
-        List<Persona> personas = service.list();
+        List<Persona> personas = service.list();                
         
         return new ResponseEntity(personas,HttpStatus.OK);
     }
@@ -30,6 +31,14 @@ public class PersonaController {
         return new ResponseEntity(persona,HttpStatus.OK);
     }
     
-    // TO DO: update
-}
+ @GetMapping("/personas/traer/perfil/")
+  public Persona getOne() {
+      return service.getOne(Integer.SIZE)
+     
+  }
+
+    private Integer integer(int i) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+}  
 
