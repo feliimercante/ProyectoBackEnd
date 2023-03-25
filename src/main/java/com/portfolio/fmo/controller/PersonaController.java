@@ -2,8 +2,6 @@ package com.portfolio.fmo.controller;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.portfolio.fmo.entities.Persona;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 import com.portfolio.fmo.entities.Proyecto;
 import com.portfolio.fmo.service.PersonaService;
 import java.util.List;
@@ -13,7 +11,12 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
+import java.util.Optional;
 
 @RestController
 @CrossOrigin( origins = "*")

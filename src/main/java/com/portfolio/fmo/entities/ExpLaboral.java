@@ -8,12 +8,9 @@ package com.portfolio.fmo.entities;
  *
  * @author Andrea
  */
+
+import javax.persistence.*;
 import java.util.Date;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 
 
 @Entity
