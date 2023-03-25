@@ -1,13 +1,8 @@
 
 package com.portfolio.fmo.entities;
 
-import java.io.Serializable;
+import javax.persistence.*;
 import java.time.LocalDate;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 
 @Entity
 public class Proyecto {

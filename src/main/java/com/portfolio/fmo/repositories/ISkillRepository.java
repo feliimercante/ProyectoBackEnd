@@ -4,7 +4,6 @@
  */
 package com.portfolio.fmo.repositories;
 
-import com.portfolio.fmo.entities.Proyecto;
 import com.portfolio.fmo.entities.Skill;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
