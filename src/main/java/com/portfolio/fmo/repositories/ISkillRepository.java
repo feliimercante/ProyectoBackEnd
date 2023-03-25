@@ -14,8 +14,6 @@ import org.springframework.stereotype.Repository;
  * @author Andrea
  */
 @Repository
-public interface ISkillRepository extends JpaRepository<Skill,Integer> {
-    public Skill findByNombre(String nombre);
-  
+public interface ISkillRepository extends JpaRepository<Skill,Integer> { 
 }
 

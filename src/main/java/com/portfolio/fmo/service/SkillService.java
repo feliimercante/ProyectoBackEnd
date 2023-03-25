@@ -33,10 +33,6 @@ public class SkillService {
         return SkillRepository.findById(id);
     }
     
-    public Skill getByNombre(String nombre){
-        return SkillRepository.findByNombre(nombre);
-    }
-    
     public void save(Skill Skill){
         SkillRepository.save(Skill);
     }

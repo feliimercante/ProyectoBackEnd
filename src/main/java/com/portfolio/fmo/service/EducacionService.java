@@ -30,11 +30,7 @@ public class EducacionService {
     public Optional<Educacion> getOne(Integer id){
         return EducacionRepository.findById(id);
     }
-    
-    public Educacion getByNombre(String nombre){
-        return EducacionRepository.findByNombre(nombre);
-    }
-    
+   
     public void save(Educacion Educacion){
         EducacionRepository.save(Educacion);
     }

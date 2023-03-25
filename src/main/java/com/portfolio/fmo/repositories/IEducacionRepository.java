@@ -15,7 +15,6 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface IEducacionRepository extends JpaRepository<Educacion,Integer> {
-    public Educacion findByNombre(String nombre);
 
     public List<Educacion> findAll();
   

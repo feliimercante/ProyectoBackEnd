@@ -15,6 +15,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -31,5 +33,16 @@ public class ExpLaboralController {
         
         return new ResponseEntity(expLaboral,HttpStatus.OK);
     }
-    
+    @GetMapping("/detail/{id}")
+    public ResponseEntity<ExpLaboral> getById(@PathVariable("id") int id){
+
+        if(!service.existsById(id))
+
+            return new ResponseEntity(new Mensaje("no existe"), HttpStatus.NOT_FOUND);
+
+        ExpLaboral expLaboral = service.getOne(id).get();
+
+        return new ResponseEntity(expLaboral, HttpStatus.OK);
+
+    }
 }

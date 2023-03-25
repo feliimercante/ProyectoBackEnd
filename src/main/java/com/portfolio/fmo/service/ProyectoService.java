@@ -31,10 +31,6 @@ public class ProyectoService {
         return ProyectoRepository.findById(id);
     }
     
-    public Proyecto getByNombre(String nombre){
-        return ProyectoRepository.findByNombre(nombre);
-    }
-    
     public void save(Proyecto proyecto){
         ProyectoRepository.save(proyecto);
     }

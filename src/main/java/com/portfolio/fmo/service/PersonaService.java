@@ -42,5 +42,6 @@ public class PersonaService {
     public void delete(Integer id ){
         PersonaRepository.deleteById(id);
     }
+   
 }
 

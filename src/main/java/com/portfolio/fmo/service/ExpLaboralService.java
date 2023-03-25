@@ -37,10 +37,6 @@ public class ExpLaboralService {
         return ExpLaboralRepository.findById(id);
     }
     
-    public ExpLaboral getByNombre(String nombre){
-        return ExpLaboralRepository.findByNombre(nombre);
-    }
-    
     public void save(ExpLaboral ExpLaboral){
         ExpLaboralRepository.save(ExpLaboral);
     }

@@ -20,7 +20,6 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface IExpLaboralRepository extends JpaRepository<ExpLaboral,Integer> {
-    public ExpLaboral findByNombre(String nombre);
 
     public List<ExpLaboral> findAll();
   
