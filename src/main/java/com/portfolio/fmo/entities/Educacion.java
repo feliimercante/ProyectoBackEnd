@@ -13,21 +13,19 @@ public class Educacion {
     @Id
     @GeneratedValue
     private Integer id;
-    @ManyToOne
-    @JoinColumn(name="persona_id", nullable=false)
-    private Persona persona;
     private String descripcion;
     private String titulo;
-    private Date FechaInicio;
-    private Date FechaFin;
+    private Date fechaInicio;
+    private Date fechaFin;
 
-    public Educacion(Integer id, Persona persona, String descripcion, String titulo, Date FechaInicio, Date FechaFin) {
-        this.id = id;
-        this.persona = persona;
+    public Educacion() {
+    }
+
+    public Educacion( String descripcion, String titulo, Date fechaInicio, Date fechaFin) {
         this.descripcion = descripcion;
         this.titulo = titulo;
-        this.FechaInicio = FechaInicio;
-        this.FechaFin = FechaFin;
+        this.fechaInicio = fechaInicio;
+        this.fechaFin = fechaFin;
     }
 
     public Integer getId() {
@@ -36,14 +34,6 @@ public class Educacion {
 
     public void setId(Integer id) {
         this.id = id;
-    }
-
-    public Persona getPersona() {
-        return persona;
-    }
-
-    public void setPersona(Persona persona) {
-        this.persona = persona;
     }
 
     public String getDescripcion() {
@@ -63,19 +53,19 @@ public class Educacion {
     }
 
     public Date getFechaInicio() {
-        return FechaInicio;
+        return fechaInicio;
     }
 
     public void setFechaInicio(Date FechaInicio) {
-        this.FechaInicio = FechaInicio;
+        this.fechaInicio = FechaInicio;
     }
 
     public Date getFechaFin() {
-        return FechaFin;
+        return fechaFin;
     }
 
     public void setFechaFin(Date FechaFin) {
-        this.FechaFin = FechaFin;
+        this.fechaFin = FechaFin;
     }
 
 }

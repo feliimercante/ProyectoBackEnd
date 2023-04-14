@@ -4,8 +4,6 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.portfolio.fmo.entities.Persona;
 import com.portfolio.fmo.entities.Proyecto;
 import com.portfolio.fmo.service.PersonaService;
-import java.util.List;
-import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,7 +17,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@CrossOrigin( origins = "*")
+@CrossOrigin( origins = "")
 public class PersonaController {
 
    @Autowired

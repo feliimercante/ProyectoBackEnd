@@ -14,11 +14,11 @@ public class CredencialService {
     @Autowired
     ICredencialRepository credencialRepository;
 
-    public Optional<Credencial> getByUserName (String userName){
-        return credencialRepository.findByUserName(userName);
+    public Optional<Credencial> getByUserName (String username){
+        return credencialRepository.findByUsername(username);
     }
 
     public boolean existsUsername(String userName){
-        return credencialRepository.existsUsername(userName);
+        return credencialRepository.existsByUsername(userName);
     }
 }

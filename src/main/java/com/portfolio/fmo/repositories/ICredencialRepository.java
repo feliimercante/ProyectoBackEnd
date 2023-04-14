@@ -8,8 +8,8 @@ import java.util.Optional;
 
 @Repository
 public interface ICredencialRepository extends JpaRepository<Credencial,Integer> {
-    public Optional<Credencial> findByUserName(String userName);
+    public Optional<Credencial> findByUsername(String username);
 
-    public boolean existsUsername(String userName);
+    public boolean existsByUsername(String username);
 }
 

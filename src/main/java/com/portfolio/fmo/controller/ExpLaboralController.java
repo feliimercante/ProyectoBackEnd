@@ -21,9 +21,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 
 @RestController
+@CrossOrigin( origins = "")
 public class ExpLaboralController {
 
     @Autowired
@@ -38,9 +40,9 @@ public class ExpLaboralController {
     @GetMapping("/detail/{id}")
     public ResponseEntity<ExpLaboral> getById(@PathVariable("id") int id){
 
-        if(!service.existsById(id))
+       // if(!service.existsById(id))
 
-            return new ResponseEntity(new Mensaje("no existe"), HttpStatus.NOT_FOUND);
+            //return new ResponseEntity(new Mensaje("no existe"), HttpStatus.NOT_FOUND);
 
         ExpLaboral expLaboral = service.getOne(id).get();
 

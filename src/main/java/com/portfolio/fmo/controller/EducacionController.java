@@ -7,6 +7,7 @@ package com.portfolio.fmo.controller;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.portfolio.fmo.entities.Educacion;
 import com.portfolio.fmo.service.EducacionService;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,8 +15,9 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@CrossOrigin(origins = "*", allowedHeaders = "Requestor-Type", exposedHeaders = "X-Get-Header")
+
 @RestController
+@CrossOrigin(origins = "")
 public class EducacionController {
 
     @Autowired
@@ -25,7 +27,7 @@ public class EducacionController {
         List<Educacion> estudios = service.list();
         Object educacion = null;
         
-        return new ResponseEntity(educacion,HttpStatus.OK);
+        return new ResponseEntity(estudios,HttpStatus.OK);
     }
     
 }

@@ -21,8 +21,7 @@ public class Persona {
     private Set<Proyecto> proyecto;
     @OneToMany(mappedBy = "persona")
     private Set<ExpLaboral> expLaboral;
-    @OneToMany(mappedBy = "persona")
-    private Set<Educacion> educacion;
+
 
     public Persona() {
     }
@@ -35,7 +34,6 @@ public class Persona {
         this.skills = skills;
         this.proyecto = proyecto;
         this.expLaboral = expLaboral;
-        this.educacion = educacion;
     }
 
     public Integer getId() {
@@ -92,14 +90,6 @@ public class Persona {
 
     public void setExpLaboral(Set<ExpLaboral> expLaboral) {
         this.expLaboral = expLaboral;
-    }
-
-    public Set<Educacion> getEducacion() {
-        return educacion;
-    }
-
-    public void setEducacion(Set<Educacion> educacion) {
-        this.educacion = educacion;
     }
 
     
